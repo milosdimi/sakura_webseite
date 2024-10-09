@@ -29,7 +29,7 @@ body {
   color: white;
   font-family: "Raleway", cursive;
   font-weight: bold;
-  margin-right: 50px;
+  margin-right: 24px;
 }
 
 .phone-button {
@@ -48,7 +48,9 @@ body {
   border: 2px solid white;
   padding: 6px;
 }
-
+.disply-n {
+  display: none;
+}
 .phone-button img {
   width: 25px;
   height: auto;
@@ -75,7 +77,13 @@ h1 {
   font-family: "Raleway", cursive;
   text-align: center;
 }
-
+.h3 {
+  font-weight: bold;
+  color: rgb(216, 55, 55);
+  font-size: 80px;
+  filter: drop-shadow(2px 6px 8px rgba(0, 0, 0, 0.5));
+  font-family: "Raleway", cursive;
+}
 span {
   font-family: "Raleway", cursive;
   font-weight: normal;
@@ -124,28 +132,93 @@ span {
 
 .food {
   background-image: url("./img/food.jpg");
-
-  display: flex;
-
-  flex-direction: column;
   background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 20px;
+  color: white;
+  text-align: center;
 }
-.h3 {
-  font-weight: bold;
-  color: rgb(216, 55, 55);
-  font-size: 80px;
-  filter: drop-shadow(2px 6px 8px rgba(0, 0, 0, 0.5));
+
+.foodorder,
+.foodorderre {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 255px;
+  margin-bottom: 30px;
+}
+
+.foodorder img,
+.foodorderre img {
+  width: 300px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.foodordeflexcon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+
+.foodorderre {
+  flex-direction: row-reverse;
+}
+
+table {
+  width: 100%;
+  max-width: 600px;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th,
+td {
+  font-size: 18px;
+  padding: 12px;
+  text-align: left;
   font-family: "Raleway", cursive;
+  color: #675e54;
 }
+
+h4 {
+  font-size: 28px;
+  margin: 0;
+  font-family: "Economica", cursive;
+  color: #d83737;
+}
+
+#location {
+  padding: 40px 20px; /* Abstand um den gesamten Abschnitt */
+  text-align: center;
+}
+
 .adresse {
   display: flex;
   justify-content: center;
-  text-align: center;
-  padding: 20px;
+  align-items: center;
+  gap: 10px; /* Abstand zwischen dem Icon und dem Text */
+  font-family: "Raleway", cursive;
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 20px; /* Abstand zur Karte */
 }
+
 .adresse img {
-  width: 25px;
+  width: 32px;
   height: auto;
+}
+
+.googlemaps {
+  width: 100%;
+  height: 350px;
+  border-radius: 8px; /* Optional: Abgerundete Ecken */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Schatteneffekt */
 }
 .adresse span {
   font-family: "Raleway", cursive;
@@ -153,19 +226,6 @@ span {
   font-size: 24px;
   color: black;
 }
-.foodorder {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding-left: 8px;
-  padding-bottom: 24px;
-}
-.foodorder img {
-  width: 352px;
-  height: auto;
-}
-
 .img {
   width: 128px;
   height: auto;
@@ -178,66 +238,35 @@ span {
   width: 24px;
   height: 24px;
   cursor: pointer;
-  padding: 6px;
-}
-table {
-  width: 600px;
-  border-collapse: collapse;
-  margin-top: 10px;
 }
 
-th,
-td {
-  font-size: 24px;
-  padding: 8px;
-  text-align: left;
-  font-family: "Raleway", cursive;
-  color: #675e54;
-  padding: 8px 8px 8px 0;
-}
-h4 {
-  font-size: 32px;
-  margin: 0;
-  font-family: "Economica", cursive;
-}
-.googlemaps {
-  height: 350px;
-  width: 100%;
-  display: flex;
-  padding-bottom: 16px;
-}
 .footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 18px;
+  padding: 20px;
   background-color: #0a141e;
+  color: white;
 }
 
 .footerlogo img {
-  width: 200px;
-}
-
-.socialmedia img {
-  width: 40px;
-  margin-left: 8px;
-  margin-right: 8px;
-}
-
-.foodordeflexcon {
-  flex-direction: column;
-  display: flex;
-  padding-left: 24px;
-}
-.foodorderre {
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: center;
-  align-items: center;
-}
-.foodorderre img {
-  width: 352px;
+  width: 180px;
   height: auto;
+}
+
+.socialmedia {
+  display: flex;
+  gap: 15px;
+}
+
+.socialmedia a img {
+  width: 40px;
+  height: auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+.socialmedia a:hover img {
+  transform: scale(1.1);
 }
 .menu-mobile {
   position: absolute;
@@ -245,20 +274,18 @@ h4 {
   width: 50px;
   top: 50px;
   cursor: pointer;
+  display: none;
 }
 .overlay-menu {
-  position: absolute;
-  right: 0;
+  z-index: 999;
+  position: fixed;
   top: 0;
-  z-index: 2;
-  display: flex;
-  flex-direction: column;
-  width: 283px;
+  right: 0;
+  width: 80%;
   height: 100vh;
-  background-color: rgb(71, 69, 69);
-  border-left: 1px solid black;
-  transform: translateX(501px);
-  transition: all 225ms ease-in-out;
+  background-color: rgba(0, 0, 0, 0.9);
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
 }
 .overlay-menu a {
   text-decoration: none;
@@ -270,6 +297,7 @@ h4 {
 }
 .show-overlay-menu {
   transform: translateX(0);
+  overflow-y: hidden;
 }
 .close-button {
   cursor: pointer;
@@ -287,117 +315,158 @@ h4 {
   font-size: x-large;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 750px) {
   .hide-mobile {
     display: none;
   }
+
   h1 {
-    font-size: 60px;
+    font-size: 50px;
   }
+
   .ordertop h2 {
-    font-size: 40px;
+    font-size: 32px;
   }
+
   .menu-mobile {
+    display: block;
     position: absolute;
-    right: 40px;
-    width: 50px;
-    top: 50px;
+    right: 20px;
+    top: 40px;
+    width: 40px;
     cursor: pointer;
   }
+
+  .menu {
+    display: none;
+  }
+
   .overlay-menu {
-    position: absolute;
-    right: 0;
+    position: fixed;
     top: 0;
-    z-index: 2;
+    right: 0;
+    width: 80%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);
     display: flex;
     flex-direction: column;
-    width: 283px;
-    height: 100vh;
-    background-color: rgb(71, 69, 69);
-    border-left: 1px solid black;
-    transform: translateX(501px);
-    transition: all 225ms ease-in-out;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
   }
-  .overlay-menu a {
-    text-decoration: none;
-    color: rgb(15, 15, 15);
-    font-family: "Raleway", cursive;
-    font-weight: bold;
-    font-size: 24px;
-    padding: 16px;
-  }
+
   .show-overlay-menu {
     transform: translateX(0);
   }
-  .close-button {
-    cursor: pointer;
-    justify-content: center;
-    margin: 100px;
-    text-decoration: none;
-    color: white;
-    display: flex;
-    align-items: center;
-    background-color: red;
-    border-radius: 5px;
-    border: 2px solid white;
+
+  .overlay-menu a {
+    font-size: 20px;
     padding: 12px;
-    font-family: "Raleway";
-    font-size: x-large;
+    color: white;
   }
-}
-@media (max-width: 600px) {
-  .order {
-    flex-direction: column;
-    gap: 64px;
+
+  .close-button {
+    margin: 20px 0;
+    padding: 10px;
+    font-size: 18px;
   }
-  .foodorder {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
+
+  .foodorder,
   .foodorderre {
-    display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    text-align: center;
+    padding: 16px 0;
   }
-  h4 {
-    font-size: 32px;
-    margin: 5px;
-    font-family: "Economica";
-    text-align: left;
+
+  .foodorder img,
+  .foodorderre img {
+    width: 100%;
+    max-width: 250px;
+    margin-bottom: 16px;
   }
-  table {
-    width: 430px;
-    border-collapse: collapse;
-    margin-top: 8px;
+
+  .foodordeflexcon {
+    padding: 16px 0;
+    text-align: center;
   }
-  th,
-  td {
-    font-size: 24px;
-    padding: 8px;
-    text-align: left;
-  }
-  .adresse span {
+  .adresse {
+    flex-direction: column;
     font-size: 16px;
   }
 
+  .googlemaps {
+    height: 250px;
+  }
+
+  table {
+    width: 100%;
+    max-width: 450px;
+  }
   .footer {
-    display: flex;
-    flex-direction: row;
-    padding: 10px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 
   .footerlogo img {
-    width: 133px;
+    margin-bottom: 20px;
+  }
 
-    margin-left: 8px;
+  .socialmedia a img {
+    width: 35px;
+  }
+}
+
+@media (max-width: 600px) {
+  .order {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .foodorder,
+  .foodorderre {
+    flex-direction: column;
+    text-align: center;
+    gap: 16px;
+  }
+
+  h4 {
+    font-size: 24px;
+    margin: 8px 0;
+    font-family: "Economica", cursive;
+    text-align: center;
+  }
+
+  table {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  th,
+  td {
+    font-size: 18px;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .adresse span {
+    font-size: 14px;
+  }
+
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .footerlogo img {
+    width: 120px;
   }
 
   .socialmedia img {
-    width: 30px;
-
-    margin-right: 17px;
+    width: 28px;
+    margin: 10px;
   }
 }

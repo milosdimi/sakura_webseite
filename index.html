@@ -3,8 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Sakura Ramen - The best ramen in town." />
+    <meta property="og:title" content="Sakura Ramen" />
+    <meta property="og:description" content="The best ramen in town!" />
+    <meta property="og:image" content="./img/sakura_logo.png" />
+    <meta property="og:url" content="https://www.sakura-ramen.com" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
@@ -13,173 +20,223 @@
       href="https://fonts.googleapis.com/css2?family=Economica:wght@400;700&family=Raleway:wght@700&display=swap"
       rel="stylesheet"
     />
+
     <link rel="stylesheet" href="style.css" />
-    <script src="script.js"></script>
+
+    <link rel="icon" href="./img/sakura_logo.png" type="image/x-icon" />
+
+    <script src="script.js" defer></script>
+
     <title>Sakura | Home</title>
   </head>
+
   <body>
-    <div style="overflow-y: hidden">
-      <div class="overflowdiv">
-        <div id="home" class="imagecontainer">
-          <div class="flags">
-            <a onclick="german()"
-              ><img src="./img/de.png" alt="german Flags"
-            /></a>
-            <a onclick="english()"
-              ><img src="./img/uk.png" alt="english Flags"
-            /></a>
-          </div>
-          <header class="menu">
-            <a class="hide-mobile" href="#menu">MENU</a>
-            <a class="hide-mobile" href="#address">LOCATIONS</a>
-            <a class="hide-mobile" href="about">ABOUT</a>
-            <div class="phone-button">
-              <a href="tel:+436641234567">
-                <img src="./img/phone.png" alt="" />+436641234567
-              </a>
-            </div>
-          </header>
-          <img
-            onclick="showMenu()"
-            class="menu-mobile"
-            src="./img/bars-solid.svg"
-            alt="menuicon"
-          />
-          <div id="menuoverlay" class="overlay-menu">
-            <a href="#menu">MENU</a>
-            <a href="#address">LOCATIONS</a>
-            <a href="#about">ABOUT</a>
-            <button onclick="closeMenu()" class="close-button">Close</button>
-          </div>
-          <div class="logo">
-            <a href="#home"></a
-            ><img src="./img/sakura_logo.png" alt="Sakura Logo" />
-          </div>
-
-          <h1 class="raleway">SAKURA RAMEN</h1>
-          <span id="text1">THE BEST RAMEN IN TOWN</span>
+    <section id="home" class="imagecontainer">
+      <!-- Navigation Menu -->
+      <nav class="menu">
+        <div class="flags">
+          <a onclick="german()">
+            <img src="./img/de.png" alt="German Flag" />
+          </a>
+          <a onclick="english()">
+            <img src="./img/uk.png" alt="English Flag" />
+          </a>
         </div>
 
-        <div>
-          <div class="ordertop">
-            <h2 id="text2">HOW TO ORDER</h2>
-          </div>
-          <div class="order">
-            <div>
-              <img src="./img/noodle.png" alt="noodle" />
-              <span id="noodle">Pick your noodle</span>
-            </div>
-            <div>
-              <img src="./img/broth.png" alt="broth" />
-              <span id="broth">Pick your broth</span>
-            </div>
-            <div>
-              <img src="./img/egg.png" alt="egg" />
-              <span id="toppings">Add your toppings</span>
-            </div>
-          </div>
-        </div>
+        <a class="hide-mobile" href="#menu">MENU</a>
+        <a class="hide-mobile" href="#address">LOCATIONS</a>
+        <a class="hide-mobile" href="about.html">ABOUT</a>
 
-        <div class="food" id="menu">
-          <div class="ordertop">
-            <h2 id="text3">OUR MENU</h2>
-          </div>
-          <div class="foodorder">
-            <div>
-              <img src="./img/R1.png" alt="broth" />
-            </div>
-            <div class="foodordeflexcon">
-              <h4>Tonkotstu Ramen</h4>
-              <table>
-                <tr>
-                  <td>Pizza</td>
-                  <td>8,99 €</td>
-                </tr>
-                <tr>
-                  <td>Kebap</td>
-                  <td>6,50 €</td>
-                </tr>
-                <tr>
-                  <td>Bosna</td>
-                  <td>5,50 €</td>
-                </tr>
-              </table>
-            </div>
-          </div>
-          <div class="foodorderre">
-            <div>
-              <img src="./img/R2.png" alt="broth" />
-            </div>
-            <div class="foodordeflexcon">
-              <h4>Spicy Miso Ramen</h4>
-              <table>
-                <tr>
-                  <td>Pizza</td>
-                  <td>8,99 €</td>
-                </tr>
-                <tr>
-                  <td>Kebap</td>
-                  <td>6,50 €</td>
-                </tr>
-                <tr>
-                  <td>Bosna</td>
-                  <td>5,50 €</td>
-                </tr>
-              </table>
-            </div>
-          </div>
-          <div class="foodorder">
-            <div>
-              <img src="./img/R3.png" alt="broth" />
-            </div>
-            <div class="foodordeflexcon">
-              <h4>Shio Ramen</h4>
-              <table>
-                <tr>
-                  <td>Pizza</td>
-                  <td>8,99 €</td>
-                </tr>
-                <tr>
-                  <td>Kebap</td>
-                  <td>6,50 €</td>
-                </tr>
-                <tr>
-                  <td>Bosna</td>
-                  <td>5,50 €</td>
-                </tr>
-              </table>
-            </div>
-          </div>
+        <div class="phone-button">
+          <a href="tel:+436641234567">
+            <img src="./img/phone.png" alt="Phone Icon" />+436641234567
+          </a>
         </div>
+      </nav>
 
-        <div class="ordertop">
-          <h2 id="loc">FIND US AT</h2>
+      <!-- Mobile Menu Icon -->
+      <img
+        onclick="showMenu()"
+        class="menu-mobile"
+        src="./img/bars-solid.svg"
+        alt="Menu Icon"
+      />
+
+      <!-- Overlay Menu -->
+      <div id="menuoverlay" class="overlay-menu">
+        <div class="flags">
+          <a onclick="german()">
+            <img src="./img/de.png" alt="German Flag" />
+          </a>
+          <a onclick="english()">
+            <img src="./img/uk.png" alt="English Flag" />
+          </a>
         </div>
-        <div class="adresse" id="address">
-          <img src="./img/map_marker.png" alt="" />
-          <span>Feldgasse 70, Kufstein, 6330</span>
+        <a href="#menu">MENU</a>
+        <a href="#address">LOCATIONS</a>
+        <a href="#about">ABOUT</a>
+        <button onclick="closeMenu()" class="close-button">Close</button>
+      </div>
+
+      <!-- Logo Section -->
+      <div class="logo">
+        <a href="#home">
+          <img src="./img/sakura_logo.png" alt="Sakura Logo" />
+        </a>
+      </div>
+
+      <!-- Heading and Tagline -->
+      <h1 class="raleway">SAKURA RAMEN</h1>
+      <span id="text1">THE BEST RAMEN IN TOWN</span>
+    </section>
+
+    <section id="how-to-order">
+      <div class="ordertop">
+        <h2 id="text2">HOW TO ORDER</h2>
+      </div>
+      <div class="order">
+        <div class="order-item">
+          <img src="./img/noodle.png" alt="Noodle" />
+          <span id="noodle">Pick your noodle</span>
         </div>
-        <iframe
-          class="googlemaps"
-          src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d10765.128009815722!2d12.168519499999999!3d47.5817567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sde!2sat!4v1707077268938!5m2!1sde!2sat"
-          style="border: 0"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-        ></iframe>
-
-        <div class="footer">
-          <div class="footerlogo">
-            <img src="./img/sakura_ramen_logo_and_text.png" alt="Dein Logo" />
-          </div>
-
-          <div class="socialmedia">
-            <img src="./img/tripadvisor_logo.png" alt="Trip" />
-            <img src="./img/facebook_logo.png" alt="facebook" />
-            <img src="./img/instagrram_logo.png" alt="instagrram_logo" />
-          </div>
+        <div class="order-item">
+          <img src="./img/broth.png" alt="Broth" />
+          <span id="broth">Pick your broth</span>
+        </div>
+        <div class="order-item">
+          <img src="./img/egg.png" alt="Egg" />
+          <span id="toppings">Add your toppings</span>
         </div>
       </div>
-    </div>
+    </section>
+
+    <section class="food" id="menu">
+      <div class="ordertop">
+        <h2 id="text3">OUR MENU</h2>
+      </div>
+
+      <!-- Menu Item 1 -->
+      <div class="foodorder">
+        <div>
+          <img src="./img/R1.png" alt="Tonkotsu Ramen" />
+        </div>
+        <div class="foodordeflexcon">
+          <h4>Tonkotsu Ramen</h4>
+          <table>
+            <tr>
+              <td>Pizza</td>
+              <td>8,99 €</td>
+            </tr>
+            <tr>
+              <td>Kebap</td>
+              <td>6,50 €</td>
+            </tr>
+            <tr>
+              <td>Bosna</td>
+              <td>5,50 €</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <!-- Menu Item 2 -->
+      <div class="foodorderre">
+        <div>
+          <img src="./img/R2.png" alt="Spicy Miso Ramen" />
+        </div>
+        <div class="foodordeflexcon">
+          <h4>Spicy Miso Ramen</h4>
+          <table>
+            <tr>
+              <td>Pizza</td>
+              <td>8,99 €</td>
+            </tr>
+            <tr>
+              <td>Kebap</td>
+              <td>6,50 €</td>
+            </tr>
+            <tr>
+              <td>Bosna</td>
+              <td>5,50 €</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <!-- Menu Item 3 -->
+      <div class="foodorder">
+        <div>
+          <img src="./img/R3.png" alt="Shio Ramen" />
+        </div>
+        <div class="foodordeflexcon">
+          <h4>Shio Ramen</h4>
+          <table>
+            <tr>
+              <td>Pizza</td>
+              <td>8,99 €</td>
+            </tr>
+            <tr>
+              <td>Kebap</td>
+              <td>6,50 €</td>
+            </tr>
+            <tr>
+              <td>Bosna</td>
+              <td>5,50 €</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section id="location">
+      <div class="ordertop">
+        <h2 id="loc">FIND US AT</h2>
+      </div>
+      <div class="adresse" id="address">
+        <img src="./img/map_marker.png" alt="Map Marker" />
+        <span>Feldgasse 70, Kufstein, 6330</span>
+      </div>
+      <iframe
+        class="googlemaps"
+        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d10765.128009815722!2d12.168519499999999!3d47.5817567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sde!2sat!4v1707077268938!5m2!1sde!2sat"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </section>
+
+    <footer class="footer">
+      <div class="footerlogo">
+        <img
+          src="./img/sakura_ramen_logo_and_text.png"
+          alt="Sakura Ramen Logo"
+        />
+      </div>
+
+      <div class="socialmedia">
+        <a
+          href="https://www.tripadvisor.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src="./img/tripadvisor_logo.png" alt="TripAdvisor Logo" />
+        </a>
+        <a
+          href="https://www.facebook.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src="./img/facebook_logo.png" alt="Facebook Logo" />
+        </a>
+        <a
+          href="https://www.instagram.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src="./img/instagrram_logo.png" alt="Instagram Logo" />
+        </a>
+      </div>
+    </footer>
   </body>
 </html>

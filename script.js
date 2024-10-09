@@ -22,3 +22,13 @@ function showMenu() {
 function closeMenu() {
   document.getElementById("menuoverlay").classList.remove("show-overlay-menu");
 }
+function showMenu() {
+  document.getElementById("menuoverlay").classList.add("show-overlay-menu");
+  document.body.style.overflow = "hidden";
+}
+
+function closeMenu() {
+  document.getElementById("menuoverlay").classList.remove("show-overlay-menu");
+  document.body.style.overflow = "";
+}
+
