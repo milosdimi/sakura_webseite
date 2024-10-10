@@ -7,6 +7,7 @@ function german() {
   document.getElementById("text3").innerHTML = "UNSERE SPEISEKARTE";
   document.getElementById("loc").innerHTML = "FINDEN SIE UNS UNTER";
 }
+
 function english() {
   document.getElementById("text1").innerHTML = "THE BEST RAMEN IN TOWN";
   document.getElementById("text2").innerHTML = "HOW TO ORDER";
@@ -16,12 +17,15 @@ function english() {
   document.getElementById("text3").innerHTML = "OUR MENU";
   document.getElementById("loc").innerHTML = "FIND US AT";
 }
+
 function showMenu() {
   document.getElementById("menuoverlay").classList.add("show-overlay-menu");
 }
+
 function closeMenu() {
   document.getElementById("menuoverlay").classList.remove("show-overlay-menu");
 }
+
 function showMenu() {
   document.getElementById("menuoverlay").classList.add("show-overlay-menu");
   document.body.style.overflow = "hidden";
